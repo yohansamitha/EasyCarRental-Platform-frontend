@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span>EastCarRental</span>
+  <button aria-label="Example icon-button with heart icon" class="example-icon favorite-icon" mat-button>
+    Home
+  </button>
+  <button aria-label="Example icon-button with heart icon" class="example-icon favorite-icon" mat-button>
+    About US
+  </button>
+  <button aria-label="Example icon-button with share icon" class="example-icon" mat-button>
+    Vehicle Fleet
+  </button>
+  <span class="example-spacer"></span>
+  <mat-form-field class="example-full-width">
+    <mat-label>Search</mat-label>
+    <input (keyup.enter)="searchCar()" matInput placeholder="Ex. BMW I8">
+  </mat-form-field>
+  &nbsp;
+  <button aria-label="Example icon-button with share icon" class="example-icon" mat-button>
+    Search
+  </button>
+  &nbsp;
+  <button aria-label="Example icon-button with share icon" color="accent" mat-raised-button>
+    Sign IN
+  </button>
+
+
+</mat-toolbar>
