@@ -1,12 +1,15 @@
 <mat-toolbar color="primary">
-  <span>EastCarRental</span>
-  <button aria-label="Example icon-button with heart icon" class="example-icon favorite-icon" mat-button>
+  <span>EasyCarRental</span>
+  <button (click)="navigate('home')" aria-label="Example icon-button with heart icon" class="example-icon favorite-icon"
+          mat-button>
     Home
   </button>
-  <button aria-label="Example icon-button with heart icon" class="example-icon favorite-icon" mat-button>
+  <button (click)="navigate('aboutus')" aria-label="Example icon-button with heart icon"
+          class="example-icon favorite-icon" mat-button>
     About US
   </button>
-  <button aria-label="Example icon-button with share icon" class="example-icon" mat-button>
+  <button (click)="navigate('vehiclefleet')" aria-label="Example icon-button with share icon" class="example-icon"
+          mat-button>
     Vehicle Fleet
   </button>
   <span class="example-spacer"></span>
@@ -22,6 +25,6 @@
   <button aria-label="Example icon-button with share icon" color="accent" mat-raised-button>
     Sign IN
   </button>
-
-
 </mat-toolbar>
+
+<router-outlet></router-outlet>

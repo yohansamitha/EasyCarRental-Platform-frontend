@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-default',
@@ -7,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DefaultComponent implements OnInit {
 
-  constructor() {
+  constructor(private _router: Router) {
   }
 
   ngOnInit(): void {
@@ -16,5 +17,11 @@ export class DefaultComponent implements OnInit {
   searchCar() {
     console.log("testing search");
     alert("testing search")
+  }
+
+  navigate(route: string) {
+    this._router.navigate(['/default/' + route]).then(r => {
+      console.log('successfully route to ' + route);
+    })
   }
 }
