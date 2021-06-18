@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {DefaultRoutingModule} from './default-routing.module';
@@ -11,7 +11,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {HomePageComponent} from './components/home-page/home-page.component';
 import {AboutUsPageComponent} from './components/about-us-page/about-us-page.component';
 import {VehicleFleetPageComponent} from './components/vehicle-fleet-page/vehicle-fleet-page.component';
-import {VehicleDetailComponent} from './components/home-page/inner-items/vehicle-detail/vehicle-detail.component';
+import {VehicleDetailComponent} from './components/vehicle-fleet-page/inner-items/vehicle-detail/vehicle-detail.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -30,6 +31,10 @@ import {VehicleDetailComponent} from './components/home-page/inner-items/vehicle
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    MatCardModule
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA
   ]
 })
 export class DefaultModule {

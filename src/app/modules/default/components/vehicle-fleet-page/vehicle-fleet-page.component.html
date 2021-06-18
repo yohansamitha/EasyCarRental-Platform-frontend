@@ -1,1 +1,6 @@
 <p>vehicle-fleet-page works!</p>
+<div class="main-wrap">
+  <div *ngFor="let data of vehicles">
+    <app-vehicle-detail [user]="data"></app-vehicle-detail>
+  </div>
+</div>
