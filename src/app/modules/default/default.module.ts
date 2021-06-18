@@ -11,6 +11,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {HomePageComponent} from './components/home-page/home-page.component';
 import {AboutUsPageComponent} from './components/about-us-page/about-us-page.component';
 import {VehicleFleetPageComponent} from './components/vehicle-fleet-page/vehicle-fleet-page.component';
+import {VehicleDetailComponent} from './components/home-page/inner-items/vehicle-detail/vehicle-detail.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {VehicleFleetPageComponent} from './components/vehicle-fleet-page/vehicle
     HomePageComponent,
     AboutUsPageComponent,
     VehicleFleetPageComponent,
+    VehicleDetailComponent,
   ],
   imports: [
     CommonModule,

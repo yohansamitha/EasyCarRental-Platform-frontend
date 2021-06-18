@@ -22,6 +22,12 @@ export class DefaultComponent implements OnInit {
   navigate(route: string) {
     this._router.navigate(['/default/' + route]).then(r => {
       console.log('successfully route to ' + route);
-    })
+    });
+  }
+
+  handleSignIN() {
+    this._router.navigate(['/auth']).then(r => {
+      console.log('successfully route to sign in');
+    });
   }
 }

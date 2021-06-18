@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
   <span>EasyCarRental</span>
+  &nbsp;
   <button (click)="navigate('home')" aria-label="Example icon-button with heart icon" class="example-icon favorite-icon"
           mat-button>
     Home
@@ -22,7 +23,7 @@
     Search
   </button>
   &nbsp;
-  <button aria-label="Example icon-button with share icon" color="accent" mat-raised-button>
+  <button (click)="handleSignIN()" aria-label="Example icon-button with share icon" color="accent" mat-raised-button>
     Sign IN
   </button>
 </mat-toolbar>
