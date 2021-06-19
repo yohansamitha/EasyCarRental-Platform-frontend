@@ -1,1 +1,102 @@
-<p>sign-up-items-page works!</p>
+<div class="outer">
+  <form (ngSubmit)="register()" [formGroup]="signUpForm" class="example-form">
+
+    <!--  Customer NIC Number  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Customer NIC Number</mat-label>
+      <input formControlName="fName" matInput type="text">
+      <mat-error *ngIf="signUpForm.get('fName')?.touched && signUpForm.get('fName')?.invalid">
+        Please enter a valid NIC number
+      </mat-error>
+    </mat-form-field>
+
+    <!--  Customer First Name  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>First Name</mat-label>
+      <input formControlName="fName" matInput type="text">
+      <mat-error *ngIf="signUpForm.get('fName')?.touched && signUpForm.get('fName')?.invalid">
+        Please enter a valid Name
+      </mat-error>
+    </mat-form-field>
+
+    <!--  Customer Last Name  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Last Name</mat-label>
+      <input formControlName="lName" matInput type="text">
+      <mat-error *ngIf="signUpForm.get('lName')?.touched && signUpForm.get('lName')?.invalid">
+        Please enter a valid Name
+      </mat-error>
+    </mat-form-field>
+
+    <!--  Customer Address  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <input formControlName="email" matInput type="email">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid address
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Customer Personal Contact -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Contact</mat-label>
+      <input formControlName="email" matInput placeholder="+94 71 663 3987"
+             type="tel">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid Customer Contact Number
+      </mat-error>
+    </mat-form-field>
+
+    <!--  Customer Email input  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="Ex. pat@example.com"
+             type="email">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+
+    <!--  Licence Number input  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>License Number</mat-label>
+      <input formControlName="email" matInput type="email">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid License Number
+      </mat-error>
+    </mat-form-field>
+
+
+    <!--  NIC image input  -->
+    <div class="example-full-width nic-image-input">
+      <mat-label class="image-label-1">NIC Image</mat-label>
+      <input (change)="getNicImage($event)" type="file">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid" class="image-error">
+        Please add NIC image
+      </mat-error>
+    </div>
+
+    <!--  License image input  -->
+    <div class="example-full-width nic-image-input">
+      <mat-label class="image-label-2">Licence Image</mat-label>
+      <input (change)="getNicImage($event)" type="file">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid" class="image-error">
+        Please add Licence Image
+      </mat-error>
+    </div>
+
+    <!--  Password  -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput type="password"
+      >
+      <mat-error *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.invalid">
+        Please enter a valid Password
+      </mat-error>
+    </mat-form-field>
+    <button [disabled]="signUpForm.invalid" class="sign-in-button" mat-raised-button>Register</button>
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  </form>
+
+</div>
+
