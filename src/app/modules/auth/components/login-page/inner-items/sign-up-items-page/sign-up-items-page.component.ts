@@ -12,9 +12,15 @@ import CustomerDTO from "../../../../dto/CustomerDTO";
 export class SignUpItemsPageComponent implements OnInit {
 
   signUpForm = new FormGroup({
+    customerNIC: new FormControl('', [Validators.minLength(3), Validators.required]),
     fName: new FormControl('', [Validators.minLength(3), Validators.required]),
     lName: new FormControl('', [Validators.minLength(3), Validators.required]),
+    address: new FormControl('', [Validators.minLength(3), Validators.required]),
+    contact: new FormControl('', [Validators.minLength(3), Validators.required]),
     email: new FormControl('', [Validators.email, Validators.required]),
+    licenceNumber: new FormControl('', [Validators.minLength(5), Validators.required]),
+    nicImagePath: new FormControl('', [Validators.required]),
+    licenseImagePath: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required, Validators.minLength(6),
       Validators.maxLength(20)]),
   })
@@ -29,22 +35,20 @@ export class SignUpItemsPageComponent implements OnInit {
 
   register() {
     this.loading = true;
-    const date = new Date();
-    const time = date.getHours() + ' : ' + date.getMinutes() + ' : ' + date.getSeconds()
 
     const dto = new CustomerDTO(
-      'C0001',
-      'U001',
+      this.signUpForm.get('customerNIC')?.value.toString().trim(),
+      'U' + this.signUpForm.get('customerNIC')?.value.toString().trim(),
       this.signUpForm.get('fName')?.value.toString().trim(),
       this.signUpForm.get('lName')?.value.toString().trim(),
-      'user address',
-      'user contact',
+      this.signUpForm.get('address')?.value.toString().trim(),
+      this.signUpForm.get('contact')?.value.toString().trim(),
       this.signUpForm.get('email')?.value.toString().trim(),
-      'licence Number',
+      this.signUpForm.get('licenceNumber')?.value.toString().trim(),
       'nic image path',
       'licence image path',
       new UserDTO(
-        'U001',
+        'U' + this.signUpForm.get('customerNIC')?.value.toString().trim(),
         this.signUpForm.get('email')?.value.toString().trim(),
         this.signUpForm.get('password')?.value.toString().trim(),
         'customer'

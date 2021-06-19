@@ -25,11 +25,11 @@ export class UserService {
       licenceNumber: dto.licenceNumber,
       licenseImagePath: dto.licenseImagePath,
       nicImagePath: dto.nicImagePath,
-      userDTO: {
-        user_Id: dto.userDTO.user_Id,
-        email: dto.userDTO.email,
-        password: dto.userDTO.password,
-        post: dto.userDTO.post
+      user: {
+        user_Id: dto.user.user_Id,
+        email: dto.user.email,
+        password: dto.user.password,
+        post: dto.user.post
       }
     });
   }

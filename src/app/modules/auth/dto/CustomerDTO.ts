@@ -1,7 +1,7 @@
 import UserDTO from "./UserDTO";
 
 export default class CustomerDTO {
-  constructor(customerNIC: string, user_Id: string, firstName: string, lastName: string, address: string, contact: string, email: string, licenceNumber: string, nicImagePath: string, licenseImagePath: string, userDTO: UserDTO) {
+  constructor(customerNIC: string, user_Id: string, firstName: string, lastName: string, address: string, contact: string, email: string, licenceNumber: string, nicImagePath: string, licenseImagePath: string, user: UserDTO) {
     this._customerNIC = customerNIC;
     this._user_Id = user_Id;
     this._firstName = firstName;
@@ -12,7 +12,7 @@ export default class CustomerDTO {
     this._licenceNumber = licenceNumber;
     this._nicImagePath = nicImagePath;
     this._licenseImagePath = licenseImagePath;
-    this._userDTO = userDTO;
+    this._user = user;
   }
 
   private _customerNIC: string;
@@ -115,13 +115,13 @@ export default class CustomerDTO {
     this._licenseImagePath = value;
   }
 
-  private _userDTO: UserDTO;
+  private _user: UserDTO;
 
-  get userDTO(): UserDTO {
-    return this._userDTO;
+  get user(): UserDTO {
+    return this._user;
   }
 
-  set userDTO(value: UserDTO) {
-    this._userDTO = value;
+  set user(value: UserDTO) {
+    this._user = value;
   }
 }
