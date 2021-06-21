@@ -11,6 +11,7 @@ export class VehicleFleetPageComponent implements OnInit {
     {
       vehicle_number: "aaa-0001",
       brand: "Toyota",
+      description: "loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu ",
       frontView: "front image",
       backView: "back image",
       rightSideView: "right side view",
@@ -27,7 +28,8 @@ export class VehicleFleetPageComponent implements OnInit {
     },
     {
       vehicle_number: "aaa-0002",
-      brand: "Toyota",
+      brand: "BMW",
+      description: "loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu ",
       frontView: "front image",
       backView: "back image",
       rightSideView: "right side view",
@@ -44,7 +46,8 @@ export class VehicleFleetPageComponent implements OnInit {
     },
     {
       vehicle_number: "aaa-0003",
-      brand: "Toyota",
+      brand: "Holden",
+      description: "loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu ",
       frontView: "front image",
       backView: "back image",
       rightSideView: "right side view",
@@ -61,7 +64,8 @@ export class VehicleFleetPageComponent implements OnInit {
     },
     {
       vehicle_number: "aaa-0004",
-      brand: "Toyota",
+      brand: "Honda",
+      description: "loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu ",
       frontView: "front image",
       backView: "back image",
       rightSideView: "right side view",
@@ -78,7 +82,8 @@ export class VehicleFleetPageComponent implements OnInit {
     },
     {
       vehicle_number: "aaa-0005",
-      brand: "Toyota",
+      brand: "Ford",
+      description: "loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu ",
       frontView: "front image",
       backView: "back image",
       rightSideView: "right side view",
