@@ -58,9 +58,14 @@ export class SignUpItemsPageComponent implements OnInit {
     this.userService.register(dto).subscribe(response => {
       this.loading = false;
       console.log(response);
+      if (response.code == "201") {
+        alert("Customer " + response.data.firstName + " successful")
+      }
     }, error => {
       this.loading = false;
-      console.log(error);
+      if (error.error.code == "400") {
+        alert(error.error.data);
+      }
     })
 
   }
