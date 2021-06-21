@@ -30,7 +30,8 @@ export class UserService {
         email: dto.user.email,
         password: dto.user.password,
         post: dto.user.post
-      }
+      },
+      booking: []
     });
   }
 }
