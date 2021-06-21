@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
 .main-wrap {
   width: 100%;
   height: 330px;
@@ -39,17 +43,23 @@
 
 .business-name {
   font-weight: bold;
+  margin-bottom: 2px;
 }
 
-.loading-area {
+#vehicle-number {
+  margin-bottom: 8px;
+}
+
+
+/*.loading-area {
   width: 100%;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}*/
 
-.inner-wrap {
+/*.inner-wrap {
   width: 300px;
   height: auto;
-}
+}*/

@@ -6,18 +6,24 @@
         src="https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg">
     </div>
     <div class="left">
-      <h3 class="business-name">
-        Vehicle name
-      </h3>
+      <h2 class="business-name">
+        {{user.brand}}
+      </h2>
+
+      <div class="basic-detail">
+        <p>
+          <mat-icon aria-label="Example home icon">speed</mat-icon>
+          {{user.transmissionType}}</p>
+        <mat-icon aria-label="Example home icon">airport_shuttle</mat-icon>
+        <mat-icon aria-label="Example home icon">settings {{user.transmissionType}}</mat-icon>
+        <img src="https://img.icons8.com/metro/26/000000/engine.png"/>
+      </div>
+
+      <h4 id="vehicle-number">{{user.vehicle_number}}</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, beatae culpa earum error esse
         incidunt labore laborum laudantium nobis officia perspiciatis quia quibusdam sequi, sit totam voluptatibus!
         Inventore, quia.</p>
-      <!--      <div class="loading-area">-->
-      <!--        <div class="inner-wrap">-->
-      <!--        </div>-->
-      <!--      </div>-->
-      <h1>{{user.brand}}</h1>
-      <h1>{{user.vehicle_number}}</h1>
+
     </div>
   </div>
 </div>
