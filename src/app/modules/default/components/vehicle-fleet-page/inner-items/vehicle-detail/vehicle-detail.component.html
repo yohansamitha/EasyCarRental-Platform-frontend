@@ -12,18 +12,48 @@
 
       <div class="basic-detail">
         <p>
-          <mat-icon aria-label="Example home icon">speed</mat-icon>
-          {{user.transmissionType}}</p>
-        <mat-icon aria-label="Example home icon">airport_shuttle</mat-icon>
-        <mat-icon aria-label="Example home icon">settings {{user.transmissionType}}</mat-icon>
-        <img src="https://img.icons8.com/metro/26/000000/engine.png"/>
+          <mat-icon aria-label="Example home icon">palette</mat-icon>&nbsp;
+          {{user.color}}
+        </p>
+        <p>
+          <mat-icon aria-label="Example home icon">speed</mat-icon>&nbsp;
+          {{user.transmissionType}}
+        </p>
+        <p>
+          <mat-icon aria-label="Example home icon">airport_shuttle</mat-icon>&nbsp;
+          {{user.numberOfPassengers}}
+        </p>
       </div>
 
-      <h4 id="vehicle-number">{{user.vehicle_number}}</h4>
+      <hr>
+
+      <div class="charges">
+        <h4>
+          Daily Rate : <span>{{user.dailyRate}}</span>
+        </h4>
+        <h4>
+          Daily Free Mileage : <span>{{user.dailyFreeMileage}}</span>
+        </h4>
+      </div>
+      <hr>
+      <div class="charges">
+        <h4>
+          Monthly Rate : <span>{{user.monthlyRate}}</span>
+        </h4>
+        <h4>
+          Monthly Free Mileage : <span>{{user.monthlyFreeMileage}}</span>
+        </h4>
+      </div>
+
+      <h4>Price per extra mileage : <span>{{user.priceForExtraKM}}</span></h4>
+
+      <h4 id="description">Description</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, beatae culpa earum error esse
         incidunt labore laborum laudantium nobis officia perspiciatis quia quibusdam sequi, sit totam voluptatibus!
         Inventore, quia.</p>
-
+      <button aria-label="Example icon-button with share icon" color="accent" mat-raised-button>
+        Rent This
+      </button>
     </div>
   </div>
 </div>
