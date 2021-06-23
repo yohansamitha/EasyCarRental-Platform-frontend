@@ -15,6 +15,8 @@ import {VehicleDetailComponent} from './components/vehicle-fleet-page/inner-item
 import {MatCardModule} from '@angular/material/card';
 import {RentVehicleComponent} from './components/vehicle-fleet-page/inner-items/vehicle-detail/inner-items/rent-vehicle/rent-vehicle.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatMenuModule} from '@angular/material/menu';
+import {CookieModule} from "ngx-cookie";
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule,
+    CookieModule.forRoot()
   ],
   schemas: [
     NO_ERRORS_SCHEMA

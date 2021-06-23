@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {CookieService} from "ngx-cookie";
 
 @Component({
   selector: 'app-default',
@@ -8,10 +9,22 @@ import {Router} from "@angular/router";
 })
 export class DefaultComponent implements OnInit {
 
-  constructor(private _router: Router) {
+  userState: string = this.getToken();
+
+  constructor(private _router: Router, private cookieService: CookieService) {
   }
 
   ngOnInit(): void {
+  }
+
+  handleLogOut() {
+    this.cookieService.remove('userToken');
+    alert("Logging out successfully");
+    this._router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this._router.onSameUrlNavigation = 'reload';
+    this._router.navigate(['/default']).then(r => {
+      console.log('successfully route to sign in');
+    });
   }
 
   searchCar() {
@@ -29,5 +42,16 @@ export class DefaultComponent implements OnInit {
     this._router.navigate(['/auth/login/access']).then(r => {
       console.log('successfully route to sign in');
     });
+  }
+
+  private getToken(): string {
+    const userToken: any = this.cookieService.getObject('userToken');
+    console.log(typeof userToken);
+    console.log(userToken);
+    if (userToken === undefined) {
+      return "empty";
+    } else {
+      return userToken.firstName + " " + userToken.lastName;
+    }
   }
 }

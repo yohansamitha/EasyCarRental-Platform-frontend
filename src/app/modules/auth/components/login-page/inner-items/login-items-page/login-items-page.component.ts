@@ -35,7 +35,7 @@ export class LoginItemsPageComponent implements OnInit {
       const cookieOption = {
         expires: tomorrow
       }
-      this.cookieService.put('userToken', response.data, cookieOption);
+      this.cookieService.putObject('userToken', response.data, cookieOption);
       alert(response.message);
       this.router.navigate(['/default']).then(r => {
           console.log("navigate to default")
