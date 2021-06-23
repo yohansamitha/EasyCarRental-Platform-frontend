@@ -38,7 +38,7 @@ export class SignUpItemsPageComponent implements OnInit {
 
     const dto = new CustomerDTO(
       this.signUpForm.get('customerNIC')?.value.toString().trim(),
-      'U' + this.signUpForm.get('customerNIC')?.value.toString().trim(),
+      'C' + this.signUpForm.get('customerNIC')?.value.toString().trim(),
       this.signUpForm.get('fName')?.value.toString().trim(),
       this.signUpForm.get('lName')?.value.toString().trim(),
       this.signUpForm.get('address')?.value.toString().trim(),
@@ -48,7 +48,7 @@ export class SignUpItemsPageComponent implements OnInit {
       'nic image path',
       'licence image path',
       new UserDTO(
-        'U' + this.signUpForm.get('customerNIC')?.value.toString().trim(),
+        'C' + this.signUpForm.get('customerNIC')?.value.toString().trim(),
         this.signUpForm.get('email')?.value.toString().trim(),
         this.signUpForm.get('password')?.value.toString().trim(),
         'customer'

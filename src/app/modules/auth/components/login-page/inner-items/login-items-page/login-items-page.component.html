@@ -1,5 +1,5 @@
 <div class="outer">
-  <form [formGroup]="loginForm" class="example-form">
+  <form (ngSubmit)="login()" [formGroup]="loginForm" class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
       <input formControlName="email" matInput placeholder="Ex. pat@example.com"

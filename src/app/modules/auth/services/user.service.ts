@@ -34,4 +34,11 @@ export class UserService {
       booking: []
     });
   }
+
+  login(email: string, password: string) {
+    return this.http.get(this.baseURL + '/user', {
+      headers: {email, password}
+    })
+
+  }
 }
