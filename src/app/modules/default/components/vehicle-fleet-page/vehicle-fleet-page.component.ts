@@ -83,7 +83,10 @@ export class VehicleFleetPageComponent implements OnInit {
     {
       vehicle_number: "aaa-0005",
       brand: "Ford",
-      description: "loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu ",
+      description:
+        "ebfuibweu loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw " +
+        "ebfuibweu loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw " +
+        "ebfuibweu loremaiwubefi uawbefiuweb fuiwaebfiu webfuiw ebfuibweu  ",
       frontView: "front image",
       backView: "back image",
       rightSideView: "right side view",
