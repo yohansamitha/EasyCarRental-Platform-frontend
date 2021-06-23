@@ -13,6 +13,8 @@ import {AboutUsPageComponent} from './components/about-us-page/about-us-page.com
 import {VehicleFleetPageComponent} from './components/vehicle-fleet-page/vehicle-fleet-page.component';
 import {VehicleDetailComponent} from './components/vehicle-fleet-page/inner-items/vehicle-detail/vehicle-detail.component';
 import {MatCardModule} from '@angular/material/card';
+import {RentVehicleComponent} from './components/vehicle-fleet-page/inner-items/vehicle-detail/inner-items/rent-vehicle/rent-vehicle.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import {MatCardModule} from '@angular/material/card';
     AboutUsPageComponent,
     VehicleFleetPageComponent,
     VehicleDetailComponent,
+    RentVehicleComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   schemas: [
     NO_ERRORS_SCHEMA
