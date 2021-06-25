@@ -1,13 +1,63 @@
-<h2 mat-dialog-title>Install Angular</h2>
-<mat-dialog-content class="mat-typography">
-  <h3>Develop across all platforms </h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+<h2 mat-dialog-title><b>EasyCarRental</b> request </h2>
 
-  {{data.vehicle.brand}}
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <!--  <button mat-button mat-dialog-close>Cancel</button>-->
-  <button (click)="modelOnClose()" mat-button>Cancel</button>
-  <button [mat-dialog-close]="true" cdkFocusInitial mat-button>Install</button>
-</mat-dialog-actions>
+<form (ngSubmit)="rent()">
+  <mat-dialog-content class="mat-typography ">
+    {{data.vehicle.brand}} {{data.vehicle.numberOfPassengers}} {{data.vehicle.color}}
+    <h3>{{data.vehicle.description}}</h3>
+
+    <div class="date-wrap">
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Choose departure date</mat-label>
+        <input (dateInput)="OnDepartureDateChange($event.value)" [matDatepicker]="departure" matInput>
+        <mat-datepicker-toggle [for]="departure" matSuffix>
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #departure></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Choose arrival date</mat-label>
+        <input (dateInput)="OnArrivalDateChange($event.value)" [matDatepicker]="arrival_date" matInput>
+        <mat-datepicker-toggle [for]="arrival_date" matSuffix>
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #arrival_date></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <h4 class="booking-type">Please select Rental type</h4>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button (change)="OnRadioButtonChange($event.value)" value="Day">Day Trip</mat-radio-button>
+      <mat-radio-button (change)="OnRadioButtonChange($event.value)" value="Month">Month Trip</mat-radio-button>
+    </mat-radio-group>
+
+    <div class="price-wrap">
+      <div class="charges">
+        <h4>
+          Daily Rate : <span>{{data.vehicle.dailyRate}}</span>
+        </h4>
+        <h4>
+          Daily Free Mileage : <span>{{data.vehicle.dailyFreeMileage}}</span>
+        </h4>
+      </div>
+      <hr>
+      <div class="charges">
+        <h4>
+          Monthly Rate : <span>{{data.vehicle.monthlyRate}}</span>
+        </h4>
+        <h4>
+          Monthly Free Mileage : <span>{{data.vehicle.monthlyFreeMileage}}</span>
+        </h4>
+      </div>
+
+      <h4>Price per extra mileage : <span>{{data.vehicle.priceForExtraKM}}</span></h4>
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button (click)="modelOnClose()" mat-button type="button">Cancel</button>
+    <button (click)="testing()" mat-button type="button">testing</button>
+    <button (click)="rent()" mat-button type="button">Place Order</button>
+  </mat-dialog-actions>
+</form>

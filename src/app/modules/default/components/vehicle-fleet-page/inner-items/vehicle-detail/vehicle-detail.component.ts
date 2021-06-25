@@ -24,9 +24,6 @@ export class VehicleDetailComponent implements OnInit {
     let matDialogRef = this.dialog.open(RentVehicleComponent, {
       data: {vehicle: this.user}
     });
-    matDialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`); // Pizza!
-    });
   }
 
 

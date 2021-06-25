@@ -16,7 +16,10 @@ import {MatCardModule} from '@angular/material/card';
 import {RentVehicleComponent} from './components/vehicle-fleet-page/inner-items/vehicle-detail/inner-items/rent-vehicle/rent-vehicle.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {CookieModule} from "ngx-cookie";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import {CookieModule} from "ngx-cookie";
     MatCardModule,
     MatDialogModule,
     MatMenuModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
   ],
   schemas: [
     NO_ERRORS_SCHEMA

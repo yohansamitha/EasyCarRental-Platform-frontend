@@ -46,11 +46,12 @@ export class DefaultComponent implements OnInit {
 
   private getToken(): string {
     const userToken: any = this.cookieService.getObject('userToken');
-    console.log(typeof userToken);
-    console.log(userToken);
     if (userToken === undefined) {
+      console.log("user not logged in")
       return "empty";
     } else {
+      console.log(typeof userToken);
+      console.log(userToken);
       return userToken.firstName + " " + userToken.lastName;
     }
   }
