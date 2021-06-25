@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {PageEvent} from "@angular/material/paginator";
+import {VehicleServiceService} from "../../services/vehicle-service.service";
 
 @Component({
   selector: 'app-vehicle-fleet-page',
@@ -103,10 +105,35 @@ export class VehicleFleetPageComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  resultArray: any[] = [];
+  resultCount = 0;
+  resultPageSize = 3;
+  resultPageSizeOptions: number[] = [2, 5, 7, 10];
+  // @ts-ignore
+  resultPageEvent: PageEvent;
+
+  constructor(private vehicleService: VehicleServiceService) {
   }
 
   ngOnInit(): void {
+    this.loadAllProducts(3, 0);
+  }
+
+  getServerData(event?: PageEvent): any {
+    // @ts-ignore
+    this.loadAllProducts(event?.pageSize, event?.pageIndex);
+  }
+
+  private loadAllProducts(pagination: number, page: number) {
+    this.vehicleService.getAllProducts(pagination, page).subscribe(response => {
+      this.resultArray = response.data;
+      this.resultCount = parseInt(response.message);
+      console.log(response)
+      console.log(response.data)
+      console.log(response.message)
+    }, error => {
+      console.log(error)
+    })
   }
 
 }

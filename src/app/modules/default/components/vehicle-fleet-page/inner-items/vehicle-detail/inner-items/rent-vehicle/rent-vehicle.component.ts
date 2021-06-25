@@ -46,7 +46,7 @@ export class RentVehicleComponent implements OnInit {
       } else {
         let bookingDTO = new BookingDTO(
           customerDetail.customerNIC,
-          this.data.vehicle.vehicle_number,
+          this.data.vehicle.vehicleNumber,
           (new Date()).toLocaleDateString('en-US'),
           (new Date(this.departure)).toLocaleDateString('en-US'),
           (new Date(this.arrival_date)).toLocaleDateString('en-US'),

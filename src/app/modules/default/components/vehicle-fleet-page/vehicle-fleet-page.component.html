@@ -1,5 +1,12 @@
 <div class="main-wrap">
-  <div *ngFor="let data of vehicles">
+  <!--  <div *ngFor="let data of vehicles">-->
+  <div *ngFor="let data of resultArray">
     <app-vehicle-detail [user]="data"></app-vehicle-detail>
   </div>
+  <mat-paginator (page)="resultPageEvent = getServerData($event)"
+                 [length]="resultCount"
+                 [pageSizeOptions]="resultPageSizeOptions"
+                 [pageSize]="resultPageSize"
+  >
+  </mat-paginator>
 </div>

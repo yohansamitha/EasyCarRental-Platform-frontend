@@ -20,6 +20,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {CookieModule} from "ngx-cookie";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatRadioModule} from '@angular/material/radio';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatDatepickerModule,
     MatNativeDateModule,
     MatRadioModule,
+    MatPaginatorModule
   ],
   schemas: [
     NO_ERRORS_SCHEMA
